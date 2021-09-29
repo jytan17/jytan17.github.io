@@ -22,7 +22,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "Junyong Tan"
 description              : "Welcome to my website! I am a graduate student at UCL currently pusuing a MS degree in Computational Statistics and Machine Learning (MSc CSML). This blog is intended to the progress of my ML and DS related projects."
 url                      : "https://jytan17.github.io"
-baseurl                  : "/jytan17.github.io"
+baseurl                  : 
 repository               : "jytan17/jytan17.github.io"
 teaser                   : "/assets/images/avg.png"
 logo                     : "/assets/images/avg.png"
