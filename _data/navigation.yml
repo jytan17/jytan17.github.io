@@ -1,9 +1,9 @@
 # main links
 main:
   - title: "Post"
-    url: https://mmistakes.github.io/
+    url: /posts/
   - title: "About"
-    url: https://www.youtube.com/
+    url: /about/
   - title: "Tags"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "Sample Collections"
