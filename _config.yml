@@ -17,19 +17,17 @@ remote_theme: "mmistakes/minimal-mistakes@4.19.3"
 
 minimal_mistakes_skin: "default"
 
-title: "Jake Tae"
+title: "Junyong Tan"
 subtitle: ""
-email: jake.tae@yale.edu
+email: jtan9801@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my website! My name is Jake Tae, a sophomore at Yale University.
-  This is where I doodle for fun, write for recollection, and embark on intellectual
-  explorations.
+  Welcome to my website! I am a student at UCL currently pusuing a MS degree in Computational Statisicsa and Machine Learning (MSc CSML). This blog is intended to document the progress of my ML and DS related projects
 words_per_minute: 200
 search: true
 search_full_content: true
 
 # twitter_username: username
-github_username: jaketae
+github_username: jytan17
 
 # Build settings
 markdown: kramdown
@@ -71,7 +69,7 @@ plugins:
 
 author:
   name: "Junyong Tan"
-  avatar: "/assets/images/Photo.jpg"
+  avatar: "/assets/images/avatar.jpg"
   bio: "MS Machine Learning student at UCL"
   location: "Portland, OR, U.S."
   links:
