@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : "A Machine Learning and Data Science related blog"
 name                     : "Junyong Tan"
 description              : "Welcome to my website! This blog is intended to document the progress of my Machine Learning and Data Science related projects. Currently, I am pursuing a degree in Computational Statistics and Machine Learning (MSc CSML) at University College London."
-url                      : # "https://jytan17.github.io"
+url                      : "https://jytan17.github.io"
 baseurl                  : 
 repository               : # "jytan17/jytan17.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
