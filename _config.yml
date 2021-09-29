@@ -93,7 +93,7 @@ search_full_content      : true
 # Site Author
 author:
   name             : "Junyong Tan"
-  avatar           : "/assets/images/avg.jpg"
+  avatar           : "/assets/images/profile_pic.png"
   bio              : "I am a graduate student pursuing a Master's degree in Machine Learning at University College London"
   location         : "Oregin, U.S."
   links:
