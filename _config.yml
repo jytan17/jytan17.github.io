@@ -105,7 +105,6 @@ author:
   avatar           : "/assets/images/avg.png"
   bio              : "A graduate student of Machine Learning at University College London"
   location         : "Oregon, US"
-  email            : "jtan9801@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
