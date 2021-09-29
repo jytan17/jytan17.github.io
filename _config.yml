@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Junyong Tan"
 title_separator          : "-"
-subtitle                 : "A ML and DS related blog"
+subtitle                 : "A Machine Learning and Data Science related blog"
 name                     : "Junyong Tan"
 description              : "Welcome to my website! This blog is intended to document the progress of my Machine Learning and Data Science related projects. Currently, I am pursuing a degree in Computational Statistics and Machine Learning at University College London."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -83,18 +83,18 @@ search_full_content      : true
 #   links: # An array of links to social media profiles
 
 # Analytics
-analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+# analytics:
+#   provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+#   google:
+#     tracking_id          :
+#     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
   name             : "Junyong Tan"
   avatar           : "/assets/images/avg.jpg"
-  bio              : "I am a graduate student at University College pursuing a Master's degree in Machine Learning"
+  bio              : "I am a graduate student pursuing a Master's degree in Machine Learning at University College London"
   location         : "Oregin, U.S."
   links:
     - label: "Email"
