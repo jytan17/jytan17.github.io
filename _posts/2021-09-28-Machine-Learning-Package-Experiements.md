@@ -1,9 +1,12 @@
 ---
-title: "Wide Single Layout Page"
+title: "Machine Learning Package Experiments"
 classes: wide
-excerpt: "A page with `classes: wide` set to expand the main content's width."
+excerpt: "A series of experiments conducted to test my implementations of various machine learning algorithms"
 toc: false
 toc_sticky: false
+sidebar:
+  title: "Content"
+  nav: sidebar-sample
 categories:
   - project
 tags:
