@@ -24,9 +24,11 @@ pip install git+https://github.com/jytan17/ML_Package
 
 ## kNN
 
-Below we will test our implementation of k nearest neighbours. The datasets used in this section can be downloaded at [https://github.com/jytan17/miscellaneous/tree/main/other/data_ml_package_ng](https://github.com/jytan17/miscellaneous/tree/main/other/data_ml_package_ng)
+Below we have conducted 2 experiments to test our implementation of k nearest neighbours. The datasets used in this section can be downloaded at [https://github.com/jytan17/miscellaneous/tree/main/other/data_ml_package_ng](https://github.com/jytan17/miscellaneous/tree/main/other/data_ml_package_ng)
 
+### Experiment 1 - Faces Dataset
 
+Let's define some helper function to load the data and then plot the first 9 faces to see what we are dealing with.
 ```python
 from models.supervised import knnClassifier
 import numpy as np
@@ -41,10 +43,7 @@ def loaddata(filename):
     yTe = np.round(data["yTe"]); # load in Testing labels
     return xTr.T,yTr.T.flatten(),xTe.T,yTe.T.flatten()
     
-```
 
-
-```python
 xTr,yTr,xTe,yTe=loaddata("faces.mat")
 
 imgplot = lambda ax, x : ax.imshow(x.reshape(31, 38).T, cmap=plt.cm.binary_r)
@@ -58,8 +57,6 @@ for i in range(3):
         ax[i, j].xaxis.set_visible(False)
         ax[i, j].yaxis.set_visible(False)
 ```
-
-
     
 <p align="center">
   <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_5_0.png">
@@ -67,7 +64,7 @@ for i in range(3):
     
 
 
-
+We define another helper function to help us visualize our kNN implementation. The function will take in the model and plot the k nearest neightbours for each target. A green border surrounding the image indicates the picture is off the same person, and the opposite for a red border.
 ```python
 def visualize_knn(model, Xte, yte, img_plotter):
     n = Xte.shape[0]
@@ -115,6 +112,9 @@ visualize_knn(clf, xTe[:5], yTe[:5], imgplot)
     
 
 
+### Experiment 2 - MNIST
+
+We will test our imeplmentation again with the MNIST dataset.
 
 ```python
 xTr,yTr,xTe,yTe=loaddata("digits.mat")
@@ -140,8 +140,9 @@ visualize_knn(clf, xTe[:5], yTe[:5], imgplot)
 
 ## Trees and Forests
 
-Below, we will conduct a few experiments to verify the implementations of our Tree algorithms, namely Classification and Regression Tree (CART), Random Forest (an ensemble method consists of CARTs), and Adaboost Trees (boosting with trees).
+Below, we have conducted a few experiments to verify the implementations of our Tree algorithms, namely Classification and Regression Tree (CART), Random Forest (an ensemble method consists of CARTs), and Adaboost Trees (boosting with trees).
 
+The dataset for this experiment was handcrafted in order to show the decision boundaries of the models.
 
 ```python
 from models.supervised import CART, RandomForest, AdaboostTree
@@ -234,8 +235,7 @@ visualize_tree(forest, xTr, yTr)
 </p>
     
 
-
-Decision boundary of a forest, but with boosting
+Decision boundary of adaboost
 
 
 ```python
@@ -254,10 +254,12 @@ visualize_tree(ada, xTr, yTr)
 
 ## PCA and K means
 
-### Experiment 1 (Iris Dataset)
+### Experiment 1 - Iris Dataset
 
-Below we will visualise the Iris dataset with 4 features in a 2D plane by performing a dimensionality reduction with PCA. Then, we will use this to visualise if the K means implemenation were able to cluster the data correctly.
-
+We tested our implementatin with of PCA in conjunction with kmeans as follows:
+1. Perform k means on the Iris dataset, which has 4 features
+2. Perform PCA on the same dataset to obtain the matrix that will allow us to project the 4D data into 2D
+3. Plot the resuling 2D features of each sample in the training data, and compare the cluser assignment with their real labels.
 
 ```python
 # import kMeans and PCA from our package
@@ -326,11 +328,11 @@ ax3.legend()
     
 
 
-### Experiment 2 (MNIST)
+### Experiment 2 - MNIST
 
-Below, we will use PCA to reduce the dimensions of the MNIST ([link to dataset](https://github.com/jytan17/miscellaneous/tree/main/other/data_ml_package_ng))dataset with a relatively large number of features (784 to be exact). This is a helpful preprocessing stage if we want to use k-means clustering as it does not work well with high dimensional data.
+Below, we used PCA to reduce the dimensions of the MNIST ([link to dataset](https://github.com/jytan17/miscellaneous/tree/main/other/data_ml_package_ng))dataset, which ha 784 features. This is a helpful preprocessing stage if we want to use k-means clustering as it does not work well with high dimensional data.
 
-Note: this is not considered as a form of feature selection as we are transforming high dimensional data into a relatively lower dimension.
+Note: this is not considered as a form of feature selection as we are transforming high dimensional data into a lower dimensional space.
 
 
 ```python
@@ -360,7 +362,7 @@ plt.imshow(make_img_grid(mnist_images[:300], n_cols=30), cmap='binary_r');
     
 
 
-Below is a plot to help us determine how many PCAs we should use for k-means. The visualization shows how much variance each PCA is able to capture, therefore, for PCAs with low values, it may be considered as irrelevant and we can safely neglect them for the next stage.
+Below is a plot to help us determine how many PCAs we should use for k-means. The visualization shows how much variance each PCA is able to capture, therefore, PCAs with low values may be considered as irrelevant and we can safely neglect them for the next stage.
 
 
 ```python
@@ -397,10 +399,9 @@ plt.ylabel('Explained variance')
     
 
 
-From the table above, we can see that most of the variance are explained by the first 20 (ish) PCAs. Therefore, we can expect the k-means to do well with around 20 PCAs.
+From the table above, we can see that most of the variance can be explained by the first 20 (ish) PCAs. Therefore, we can expect the k-means to do well with around 20 PCAs.
 
-Now, we perform k means clustering on the MNIST dataset using the dimension reduced version. We set can let k be an arbitrary number here, but we know there are exactly 10 groups in our dataset. However, in PCA we normally do not know the actual number of groups, therefore we will try k = 15.
-
+After the orginal 784 features dataset has been reduced to 20 features, we can efficient use this for clustering. Now, we know that there are exactly 10 groups for the MNIST dataset, but we have set k to be 20 here as the exact number of groups are not known for datasets that we actually use k means for.
 
 
 ```python
@@ -452,14 +453,12 @@ plt.imshow(make_img_grid(mu_mnist.reshape(15,28,28)), cmap='binary_r');
     
 
 
-We get the a number for each cluster! Albeit a not so high def. one.
+We get the a number for each cluster!
 
 ## Support Vector Machine
 
 
-
-
-Below, we will generate some artificial datasets to test our implementations of the primal support vector machine (SVM) and kernelised SVM.
+Below, we have generated some artificial datasets to test our implementations of the primal support vector machine (SVM) and kernelised SVM.
 
 There will be two types of data, one linearly separable and another non-linearly separable. In the non-linearly separable case, the primal SVM will fail, thus requiring a more sophisticated technique (kernels) which involves projecting the data into a higher dimension for which the data is linearly separable.
 
@@ -547,7 +546,7 @@ def visualize_svm(model, arrow = True):
     
 ```
 
-Visualisation of the two datesets. As you can see, the table on the right looks separable by a straight line but the spiral dataset is not.
+As you can see, the plot on the right looks separable by a straight line but the spiral dataset (left) is not.
 
 
 ```python
@@ -614,7 +613,7 @@ visualize_svm(clf1)
     
 
 
-In this case, we use a kernelised SVM (only the rbf kernel is supported now)
+In this case, we can use a kernelised SVM (only the rbf kernel is supported now).
 
 
 ```python
@@ -650,11 +649,11 @@ visualize_svm(clf2, False)
 
 ## Feedforward Network
 
-Below we will test our implementation of a basic feed forward neural network on the MNIST dataset.
+Below, we have tested our implementation of a basic feed forward neural network on the MNIST dataset.
 
-The mnist dataset is taken from the "sample_data" on google colab. Thus, running this section on google colab will automatically load the data without the need to download it. However, if you want to run this locally, please download the data from [Colab](https://colab.research.google.com/).
+The mnist dataset is taken from the "sample_data" on google colab. Thus, running this section on google colab will automatically load the data. However, if you want to run this locally, please download the data from [Colab](https://colab.research.google.com/).
 
-We will start by preprocessing the data by one hot encoding the labels and normalizing the data.
+We first preprocessed the data by one hot encoding the labels and normalizing the data.
 
 
 ```python
@@ -676,7 +675,7 @@ Xtr, Xte, ytr, yte = train_test_split(X, y, test_size = .2)
 Xtr, Xva, ytr, yva = train_test_split(Xtr, ytr, test_size=.1)
 ```
 
-We trained the network for 30 epochs with a mini batch size of 50 and a learning rate of 3.
+We trained the network for 30 epochs with a mini batch size of 50 and a learning rate of 3. After one, epoch the model was able to predict 90% of the samples correctly from the validatin dataset.
 
 
 ```python
