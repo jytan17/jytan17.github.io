@@ -2,9 +2,7 @@
 title: "Machine Learning Package Experiments"
 classes: wide
 excerpt: "A series of experiments conducted to test my implementations of various machine learning algorithms"
-toc: false
-toc_sticky: false
-sidebar: toc
+toc: true
 categories:
   - project
 tags:
