@@ -4,7 +4,7 @@ classes: wide
 excerpt: "A series of experiments conducted to test my implementations of various machine learning algorithms"
 toc: false
 toc_sticky: false
-
+sidebar: toc
 categories:
   - project
 tags:
