@@ -61,7 +61,7 @@ for i in range(3):
 
 
     
-![png](output_5_0.png)
+<img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_5_0.png">
     
 
 
