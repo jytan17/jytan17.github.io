@@ -2,6 +2,7 @@
 title: Machine Learning Package Implementation Experiments
 mathjax: true
 toc: true
+classes: wide
 categories:
   - project
 tags:
