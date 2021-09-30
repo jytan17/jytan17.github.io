@@ -4,9 +4,7 @@ classes: wide
 excerpt: "A series of experiments conducted to test my implementations of various machine learning algorithms"
 toc: false
 toc_sticky: false
-sidebar:
-  title: "Content"
-  nav: 
+
 categories:
   - project
 tags:
@@ -15,6 +13,14 @@ tags:
   - deep_learning
 ---
 
+This notebook is a rough documentation of a series of experiments conducted to test my implementations of the following algorithms:
+1. [kNN](#knn)
+2. [CART, Random Forest, and Adaboosted Trees](#trees)
+3. [PCA and k-Means](#pca)
+4. [SVM](#svm)
+5. [Feedforward Neural Network](#nn)
+
+Some of the implemented algorithms have been omitted. A list of the implemented/planned algorithms can be found [here](https://github.com/jytan17/ML_Package/blob/main/README.md)
 ## Installing the package
 
 
@@ -22,7 +28,7 @@ tags:
 pip install git+https://github.com/jytan17/ML_Package
 ```
 
-## kNN
+## kNN <a name="knn"></a>
 
 Below we have conducted 2 experiments to test our implementation of k nearest neighbours. The datasets used in this section can be downloaded at [https://github.com/jytan17/miscellaneous/tree/main/other/data_ml_package_ng](https://github.com/jytan17/miscellaneous/tree/main/other/data_ml_package_ng)
 
@@ -135,7 +141,7 @@ visualize_knn(clf, xTe[:5], yTe[:5], imgplot)
     
 
 
-## Trees and Forests
+## CART, Random Forests, and Adaboosted Trees <a name="trees"></a>
 
 Below, we have conducted a few experiments to verify the implementations of our Tree algorithms, namely Classification and Regression Tree (CART), Random Forest (an ensemble method consists of CARTs), and Adaboost Trees (boosting with trees).
 
@@ -249,7 +255,7 @@ visualize_tree(ada, xTr, yTr)
     
 
 
-## PCA and K means
+## PCA and K means <a name="pca"></a>
 
 ### Experiment 1 - Iris Dataset
 
@@ -452,7 +458,7 @@ plt.imshow(make_img_grid(mu_mnist.reshape(15,28,28)), cmap='binary_r');
 
 We get the a number for each cluster!
 
-## Support Vector Machine
+## Support Vector Machine <a name="svm"></a>
 
 
 Below, we have generated some artificial datasets to test our implementations of the primal support vector machine (SVM) and kernelised SVM.
@@ -644,7 +650,7 @@ visualize_svm(clf2, False)
     
 
 
-## Feedforward Network
+## Feedforward Network <a name="nn"></a>
 
 Below, we have tested our implementation of a basic feed forward neural network on the MNIST dataset.
 
