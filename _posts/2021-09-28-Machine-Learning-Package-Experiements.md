@@ -114,8 +114,6 @@ visualize_knn(clf, xTe[:5], yTe[:5], imgplot)
 
 ### Experiment 2 - MNIST
 
-We will test our imeplmentation again with the MNIST dataset.
-
 ```python
 xTr,yTr,xTe,yTe=loaddata("digits.mat")
 
