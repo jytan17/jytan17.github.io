@@ -109,7 +109,9 @@ visualize_knn(clf, xTe[:5], yTe[:5], imgplot)
 
 
     
-![png](output_6_1.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_6_1.png">
+</p>
     
 
 
@@ -130,7 +132,9 @@ visualize_knn(clf, xTe[:5], yTe[:5], imgplot)
 
 
     
-![png](output_7_1.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_7_1.png">
+</p>
     
 
 
@@ -208,7 +212,9 @@ visualize_tree(cart, xTr, yTr)
 
 
     
-![png](output_13_0.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_13_0.png">
+</p>
     
 
 
@@ -223,7 +229,9 @@ visualize_tree(forest, xTr, yTr)
 
 
     
-![png](output_15_0.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_15_0.png">
+</p>
     
 
 
@@ -238,7 +246,9 @@ visualize_tree(ada, xTr, yTr)
 
 
     
-![png](output_17_0.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_17_0.png">
+</p>
     
 
 
@@ -310,7 +320,9 @@ ax3.legend()
 
 
     
-![png](output_24_1.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_24_1.png">
+</p>
     
 
 
@@ -342,7 +354,9 @@ plt.imshow(make_img_grid(mnist_images[:300], n_cols=30), cmap='binary_r');
 
 
     
-![png](output_26_0.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_26_0.png">
+</p>
     
 
 
@@ -377,7 +391,9 @@ plt.ylabel('Explained variance')
 
 
     
-![png](output_28_1.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_28_1.png">
+</p>
     
 
 
@@ -413,7 +429,9 @@ plt.tight_layout();
 
 
     
-![png](output_32_0.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_32_0.png">
+</p>
     
 
 
@@ -428,7 +446,9 @@ plt.imshow(make_img_grid(mu_mnist.reshape(15,28,28)), cmap='binary_r');
 
 
     
-![png](output_34_0.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_34_0.png">
+</p>
     
 
 
@@ -554,7 +574,9 @@ ax2.legend(["+1", "-1"])
 
 
     
-![png](output_41_1.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_41_1.png">
+</p>
     
 
 
@@ -569,7 +591,9 @@ visualize_svm(clf2)
 
 
     
-![png](output_43_0.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_43_0.png">
+</p>
     
 
 
@@ -584,7 +608,9 @@ visualize_svm(clf1)
 
 
     
-![png](output_45_0.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_45_0.png">
+</p>
     
 
 
@@ -599,7 +625,9 @@ visualize_svm(clf1, False)
 
 
     
-![png](output_47_0.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_47_0.png">
+</p>
     
 
 
@@ -614,7 +642,9 @@ visualize_svm(clf2, False)
 
 
     
-![png](output_49_0.png)
+<p align="center">
+  <img src="/assets/images/2021-09-28-Machine-Learning-Package-Experiements/output_49_0.png">
+</p>
     
 
 
