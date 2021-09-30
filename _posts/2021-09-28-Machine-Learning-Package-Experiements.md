@@ -6,7 +6,7 @@ toc: false
 toc_sticky: false
 sidebar:
   title: "Content"
-  nav: sidebar-sample
+  nav: 
 categories:
   - project
 tags:
@@ -64,7 +64,7 @@ for i in range(3):
     
 
 
-We define another helper function to help us visualize our kNN implementation. The function will take in the model and plot the k nearest neightbours for each target. A green border surrounding the image indicates the picture is off the same person, and the opposite for a red border.
+We define another helper function to help us visualize our kNN implementation. This function will take in the model and plot the k nearest neightbours for each target. A green border surrounding the image indicates the picture is off the same person, and the opposite for a red border.
 ```python
 def visualize_knn(model, Xte, yte, img_plotter):
     n = Xte.shape[0]
@@ -113,6 +113,7 @@ visualize_knn(clf, xTe[:5], yTe[:5], imgplot)
 
 
 ### Experiment 2 - MNIST
+Similar experiment conducted on the MNIST dataset.
 
 ```python
 xTr,yTr,xTe,yTe=loaddata("digits.mat")
@@ -126,8 +127,6 @@ visualize_knn(clf, xTe[:5], yTe[:5], imgplot)
 ```
 
     Error Rate: 5.48 %
-
-
 
     
 <p align="center">
@@ -254,7 +253,7 @@ visualize_tree(ada, xTr, yTr)
 
 ### Experiment 1 - Iris Dataset
 
-We tested our implementatin with of PCA in conjunction with kmeans as follows:
+We tested our implementatin of PCA in conjunction with k-means as follows:
 1. Perform k means on the Iris dataset, which has 4 features
 2. Perform PCA on the same dataset to obtain the matrix that will allow us to project the 4D data into 2D
 3. Plot the resuling 2D features of each sample in the training data, and compare the cluser assignment with their real labels.
@@ -328,7 +327,7 @@ ax3.legend()
 
 ### Experiment 2 - MNIST
 
-Below, we used PCA to reduce the dimensions of the MNIST ([link to dataset](https://github.com/jytan17/miscellaneous/tree/main/other/data_ml_package_ng))dataset, which ha 784 features. This is a helpful preprocessing stage if we want to use k-means clustering as it does not work well with high dimensional data.
+Below, we used PCA to reduce the dimensions of the MNIST ([link to dataset](https://github.com/jytan17/miscellaneous/tree/main/other/data_ml_package_ng))dataset, which has 784 features. This is a helpful preprocessing stage if we want to use k-means clustering as it does not work well with high dimensional data.
 
 Note: this is not considered as a form of feature selection as we are transforming high dimensional data into a lower dimensional space.
 
