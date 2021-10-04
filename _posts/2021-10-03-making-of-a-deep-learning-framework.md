@@ -53,7 +53,6 @@ $$
 $$
 \implies (1)\cdot(2) = 2
 $$
-
 2. $ z_2 = f_2(f_1(x)) = (2x)^2 = 4x^2$, or simply $f_2(z_1) = z_1^2$,
 
 $$
@@ -69,9 +68,8 @@ $$
 $$
 
 $$
-\implies 4x
+\implies 8x
 $$
-
 3. $f_3(f_2(f_1(x))) = cos[(2x)^2]$, or simply $f_3(z_2)=cos(z_2)$
 
 $$
