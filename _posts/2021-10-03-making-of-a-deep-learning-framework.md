@@ -2,15 +2,13 @@
 title: "Making of a Deep Learning Framework - Part 1"
 classes: wide
 excerpt: "A documentation of writing a \"not so efficient\" deep learning framework. Part 1 is about writing an autograd system, and the rough theories behind backpropagation."
+toc: true
 categories:
   - project
 tags:
   - from_scratch
   - deep_learning
 ---
-
-
-# Making of a Deep Learning Framework - Part 1
 
 Recently, I was implementing a neural network from scratch and it got me thinking about "what goes on under the hood of a deep learning framework?" Having used Pytorch for quite some time now, I have always treated everything like a magic trick - I am happy with what I see (the results!), but I don't know what is going on! Subsequently, this got me into reading some brilliant blog posts and books on how to implement a deep learning framework.
 
