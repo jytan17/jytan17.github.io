@@ -47,18 +47,21 @@ All in all, the above equations are just for formalaity and in fact, I find thos
 
 1. $z_1 = f_1(x) = 2x$ 
 
-\begin{align}
-\frac{df_1}{dx} = &(\frac{df_1}{df_1})(\frac{df_1}{dx}) \\ &(1)\cdot(2) = 2
-\end{align}
+$$
+\frac{df_1}{dx} = (\frac{df_1}{df_1})(\frac{df_1}{dx})
+$$
+$$(1)\cdot(2) = 2
+$$
 
 2. $ z_2 = f_2(f_1(x)) = (2x)^2 = 4x^2$, or simply $f_2(z_1) = z_1^2$,
 
-\begin{align}
-\frac{df_2}{dx} = &(\frac{df_2}{df_2})(\frac{df_2}{dz_1})(\frac{dz_1}{dx}) 
-\\= &(1)\cdot(2z_1)\cdot(2) 
-\\=&(1)\cdot(4x)\cdot(2) &\text{since }z_1 = 2x
-\\=& 4x 
-\end{align}
+$$
+\frac{df_2}{dx} = (\frac{df_2}{df_2})(\frac{df_2}{dz_1})(\frac{dz_1}{dx}) 
+\\= (1)\cdot(2z_1)\cdot(2) 
+\\=(1)\cdot(4x)\cdot(2) \text{since }z_1 = 2x
+\\= 4x 
+$$
+
 3. $f_3(f_2(f_1(x))) = cos[(2x)^2]$, or simply $f_3(z_2)=cos(z_2)$
 
 \begin{align}
@@ -273,7 +276,7 @@ y = x + z - u^2 \text{ for } x = 3, z = 2 \text{ and } u = 6\\\
 \frac{dy}{du} = -2u \implies -12 \text{ at } u = 6 \\
 \end{equation}
 
-2. 
+3. 
 \begin{equation}
 y = x * z \text{ for } x = 3 \text{ and } z = 2\\
 \frac{dy}{dx} = z \implies 2 \text{ at } x = 3 \\
