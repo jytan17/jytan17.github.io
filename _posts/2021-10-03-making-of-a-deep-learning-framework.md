@@ -89,7 +89,6 @@ $$
 $$
 \implies-8xsin(2x^2)
 $$
-\end{align}
 
 
 
@@ -281,11 +280,16 @@ are invoked when we use the multiplcation "*" (or + for \_\_add\_\_, etc) operat
 
 ## Function Differentiaion Experiments
 To see how this works, we will demonstrate with the following examples"
+
 1. 
-\begin{equation}
-y = x^2 \text{for} x = 3 \\
+$$
+y = x^2 \text{for} x = 3
+$$
+
+$$
 \frac{dy}{dx} = 2x \implies 6 \text{ at } x = 3
-\end{equation}
+$$
+
 
 
 2. 
@@ -300,6 +304,7 @@ $$
 $$
 \frac{dy}{dx} = 1 \implies 1 \text{ at } z = 2
 $$
+
 $$
 \frac{dy}{du} = -2u \implies -12 \text{ at } u = 6
 $$
