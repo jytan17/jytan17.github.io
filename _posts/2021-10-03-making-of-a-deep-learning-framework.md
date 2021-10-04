@@ -1,7 +1,7 @@
 ---
 title: "Making of a Deep Learning Framework - Part 1"
 classes: wide
-excerpt: "A documentation of writing a \"not so efficient\" deep learning framework. Part 1 is about writing an autograd system, and the rough theories behind backpropagation."
+excerpt: "A documentation of writing a deep learning framework. Part 1 is about writing an autograd system, and the rough theories behind backpropagation."
 toc: true
 categories:
   - project
