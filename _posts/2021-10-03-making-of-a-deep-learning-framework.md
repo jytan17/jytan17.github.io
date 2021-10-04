@@ -271,7 +271,7 @@ y = x^2 \text{for} x = 3 \\
 
 2. 
 \begin{equation}
-y = x + z - u^2 \text{ for } x = 3, z = 2 \text{ and } u = 6\\\
+y = x + z - u^2 \text{ for } x = 3, z = 2 \text{ and } u = 6\\
 \frac{dy}{dx} = 1 \implies 1 \text{ at } x = 3 \\
 \frac{dy}{dx} = 1 \implies 1 \text{ at } z = 2 \\
 \frac{dy}{du} = -2u \implies -12 \text{ at } u = 6 \\
