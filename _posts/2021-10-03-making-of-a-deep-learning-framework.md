@@ -9,7 +9,6 @@ tags:
   - from_scratch
   - deep_learning
 ---
-
 Recently, I was implementing a neural network from scratch and it got me thinking about "what goes on under the hood of a deep learning framework?" Having used Pytorch for quite some time now, I have always treated everything like a magic trick - I am happy with what I see (the results!), but I don't know what is going on! Subsequently, this got me into reading some brilliant blog posts and books on how to implement a deep learning framework.
 
 The core of any deep learning framework is its ability to auto differentiate any function through backpropagation, no matter how complex it is. Although the concept is not rocket science and is relatively easy to understand when trying to derive it on paper, this is only the case (for me, at least) for univariate examples. Any attempt trying to derive a general **vectorized** formula for the procedure quickly becomes messy and untractable. 
@@ -50,26 +49,46 @@ All in all, the above equations are just for formalaity and in fact, I find thos
 $$
 \frac{df_1}{dx} = (\frac{df_1}{df_1})(\frac{df_1}{dx})
 $$
+
 $$
-\frac{df_1}{dx} = (1)\cdot(2) = 2
+\implies (1)\cdot(2) = 2
 $$
 
 2. $ z_2 = f_2(f_1(x)) = (2x)^2 = 4x^2$, or simply $f_2(z_1) = z_1^2$,
 
 $$
-\frac{df_2}{dx} = (\frac{df_2}{df_2})(\frac{df_2}{dz_1})(\frac{dz_1}{dx})  
-= (1)\cdot(2z_1)\cdot(2) 
-=(1)\cdot(4x)\cdot(2) \text{since }z_1 = 2x
-= 4x 
+\frac{df_2}{dx} = (\frac{df_2}{df_2})(\frac{df_2}{dz_1})(\frac{dz_1}{dx}) 
+$$
+
+$$
+\implies (1)\cdot(2z_1)\cdot(2) 
+$$
+
+$$
+\implies (1)\cdot(4x)\cdot(2) \text{, since } z_1 = 2x
+$$
+
+$$
+\implies 4x
 $$
 
 3. $f_3(f_2(f_1(x))) = cos[(2x)^2]$, or simply $f_3(z_2)=cos(z_2)$
 
-\begin{align}
-\frac{df_3}{dx} = &(\frac{df_3}{df_3})(\frac{df_3}{dz_2})(\frac{dz_2}{dz_1})(\frac{dz_1}{dx}) 
-\\=& (1)\cdot(-sin(z_2))\cdot(2z_1)(2)
-\\= &(1)(-sin(2x^2))\cdot(4x)\cdot(2)  &\text{since }z_2 = 2x^2 \text{ and } z_1 = 2x
-\\=&-8xsin(2x^2)
+$$
+\frac{df_3}{dx} = (\frac{df_3}{df_3})(\frac{df_3}{dz_2})(\frac{dz_2}{dz_1})(\frac{dz_1}{dx}) 
+$$
+
+$$
+\implies (1)\cdot(-sin(z_2))\cdot(2z_1)(2)
+$$
+
+$$
+\implies (1)(-sin(2x^2))\cdot(4x)\cdot(2)  \text{, since }z_2 = 2x^2 \text{ and } z_1 = 2x
+$$
+
+$$
+\implies-8xsin(2x^2)
+$$
 \end{align}
 
 
@@ -270,19 +289,35 @@ y = x^2 \text{for} x = 3 \\
 
 
 2. 
-\begin{equation}
-y = x + z - u^2 \text{ for } x = 3, z = 2 \text{ and } u = 6\\
-\frac{dy}{dx} = 1 \implies 1 \text{ at } x = 3 \\
-\frac{dy}{dx} = 1 \implies 1 \text{ at } z = 2 \\
-\frac{dy}{du} = -2u \implies -12 \text{ at } u = 6 \\
-\end{equation}
+$$
+y = x + z - u^2 \text{ for } x = 3, z = 2 \text{ and } u = 6
+$$
 
-3. 
-\begin{equation}
-y = x * z \text{ for } x = 3 \text{ and } z = 2\\
-\frac{dy}{dx} = z \implies 2 \text{ at } x = 3 \\
-\frac{dy}{dx} = x \implies 3 \text{ at } z = 2 \\
-\end{equation}
+$$
+\frac{dy}{dx} = 1 \implies 1 \text{ at } x = 3
+$$
+
+$$
+\frac{dy}{dx} = 1 \implies 1 \text{ at } z = 2
+$$
+$$
+\frac{dy}{du} = -2u \implies -12 \text{ at } u = 6
+$$
+
+
+2. 
+$$
+y = x * z \text{ for } x = 3 \text{ and } z = 2
+$$
+
+$$
+\frac{dy}{dx} = z \implies 2 \text{ at } x = 3 
+$$
+
+$$
+\frac{dy}{dx} = x \implies 3 \text{ at } z = 2
+$$
+
 
 
 
