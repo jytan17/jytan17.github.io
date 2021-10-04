@@ -50,16 +50,17 @@ All in all, the above equations are just for formalaity and in fact, I find thos
 $$
 \frac{df_1}{dx} = (\frac{df_1}{df_1})(\frac{df_1}{dx})
 $$
-$$(1)\cdot(2) = 2
+$$
+\frac{df_1}{dx} = (1)\cdot(2) = 2
 $$
 
 2. $ z_2 = f_2(f_1(x)) = (2x)^2 = 4x^2$, or simply $f_2(z_1) = z_1^2$,
 
 $$
-\frac{df_2}{dx} = (\frac{df_2}{df_2})(\frac{df_2}{dz_1})(\frac{dz_1}{dx}) 
-\\= (1)\cdot(2z_1)\cdot(2) 
-\\=(1)\cdot(4x)\cdot(2) \text{since }z_1 = 2x
-\\= 4x 
+\frac{df_2}{dx} = (\frac{df_2}{df_2})(\frac{df_2}{dz_1})(\frac{dz_1}{dx})  
+= (1)\cdot(2z_1)\cdot(2) 
+=(1)\cdot(4x)\cdot(2) \text{since }z_1 = 2x
+= 4x 
 $$
 
 3. $f_3(f_2(f_1(x))) = cos[(2x)^2]$, or simply $f_3(z_2)=cos(z_2)$
