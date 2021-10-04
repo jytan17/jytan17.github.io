@@ -310,7 +310,7 @@ $$
 $$
 
 
-2. 
+3. 
 $$
 y = x * z \text{ for } x = 3 \text{ and } z = 2
 $$
