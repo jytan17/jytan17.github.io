@@ -10,8 +10,6 @@ tags:
 ---
 
 
-
-
 # Making of a Deep Learning Framework - Part 1
 
 Recently, I was implementing a neural network from scratch and it got me thinking about "what goes on under the hood of a deep learning framework?" Having used Pytorch for quite some time now, I have always treated everything like a magic trick - I am happy with what I see (the results!), but I don't know what is going on! Subsequently, this got me into reading some brilliant blog posts and books on how to implement a deep learning framework.
@@ -549,8 +547,10 @@ plt.legend()
 
 
 
+<p align="center">
+  <img src="/assets/images/Making-of-a-deep-learning-framework/part1/output_16_1.png">
+</p>
     
-![png](output_16_1.png)
     
 
 
@@ -639,7 +639,9 @@ plt.legend()
 
 
     
-![png](output_18_1.png)
+<p align="center">
+  <img src="/assets/images/Making-of-a-deep-learning-framework/part1/output_18_1.png">
+</p>
     
 
 
@@ -737,7 +739,9 @@ plt.legend()
 
 
     
-![png](output_22_1.png)
+<p align="center">
+  <img src="/assets/images/Making-of-a-deep-learning-framework/part1/output_22_1.png">
+</p>
     
 
 
